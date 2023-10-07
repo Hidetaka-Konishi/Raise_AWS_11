@@ -12,4 +12,6 @@ require 'serverspec'
 set :backend, :exec
 ```
 8. テストコードを書いたファイルで先頭の部分に`require 'spec_helper'`が記述されていることを確認する。
-9. 
+9. NginxとUnicornを再起動する。Unicornが再起動できない場合は11からの手順を行う。
+10. `rake spec`を実行する。
+11. 
