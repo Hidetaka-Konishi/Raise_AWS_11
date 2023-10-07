@@ -24,6 +24,10 @@ set :backend, :exec
 12. `mkdir my_serverspec_tests`を実行する。
 13. `cd my_serverspec_tests`を実行する。
 14. `git init`を実行する。
-15. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。
+15. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。Add a README fileにチェックを入れる。
 16. `git remote add origin [リポジトリのURL]`を実行する。
-17. 
+17. `echo "# My Serverspec Tests" > README.md`を実行する。
+18. `git add README.md`を実行する。
+19. `git commit -m "任意のメッセージ"`を実行する。
+20. `git push -u origin master`を実行する。
+21. 
