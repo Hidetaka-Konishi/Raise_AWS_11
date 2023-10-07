@@ -17,6 +17,7 @@ set :backend, :exec
 11. `rvm use 3.1.2@my_new_gemset --create`を実行する。3.1.2は実際に使用しているrubyのバージョンに合わせる。これにより`my_new_gemset`という名前のGemsetが作成される。
 12. `gem install bundler`を実行する。
 13. `gem install serverspec`を実行する。
-14. 
+14. `bundle install`を実行する。
+15. `find ./spec -type f -name '*_spec.rb'`を実行して
 
 
