@@ -20,4 +20,10 @@ set :backend, :exec
 14. `bundle install`を実行する。
 15. `find ./spec -type f -name '*_spec.rb'`を実行して
 
-
+11. `cd ..`でRailsのプロジェクトディレクトリから出る。
+12. `mkdir my_serverspec_tests`を実行する。
+13. `cd my_serverspec_tests`を実行する。
+14. `git init`を実行する。
+15. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。
+16. `git remote add origin [リポジトリのURL]`を実行する。
+17. 
