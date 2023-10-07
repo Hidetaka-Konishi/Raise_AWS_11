@@ -14,4 +14,9 @@ set :backend, :exec
 8. テストコードを書いたファイルで先頭の部分に`require 'spec_helper'`が記述されていることを確認する。
 9. NginxとUnicornを再起動する。Unicornが再起動できない場合は11からの手順を行う。
 10. `rake spec`を実行する。
-11. 
+11. `rvm use 3.1.2@my_new_gemset --create`を実行する。3.1.2は実際に使用しているrubyのバージョンに合わせる。これにより`my_new_gemset`という名前のGemsetが作成される。
+12. `gem install bundler`を実行する。
+13. `gem install serverspec`を実行する。
+14. 
+
+
