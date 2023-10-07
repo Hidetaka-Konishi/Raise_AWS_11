@@ -24,10 +24,18 @@ set :backend, :exec
 12. `mkdir my_serverspec_tests`を実行する。
 13. `cd my_serverspec_tests`を実行する。
 14. `git init`を実行する。
-15. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。Add a README fileにチェックを入れる。
+15. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。「Add a README file」にチェックを入れる。
 16. `git remote add origin [リポジトリのURL]`を実行する。
 17. `echo "# My Serverspec Tests" > README.md`を実行する。
 18. `git add README.md`を実行する。
 19. `git commit -m "任意のメッセージ"`を実行する。
 20. `git push -u origin master`を実行する。
-21. 
+21. ユーザー名にはGitHubのユーザ名を入力する。
+22. パスワードを生成するために、GitHubアカウントの右上のユーザーのマークから「Settings」をクリックする。
+23. 左側のメニューから「Developer settings」をクリックする。
+24. 「Personal access tokens」をクリックする。
+25. 「Tokens(classic)」をクリックする。
+26. 「Generate new token」→「Generate new token(classic)」をクリックする。
+27. 「Note」に名前を入力して、「Select scopes」では「repo」にチェックを入れ、一番下までスクロールして、「Generate token」をクリックする。
+28. トークンが表示されるのでコピーして大切に保管し、パスワード入力欄にコピーしたトークンを入力する。
+29. 
