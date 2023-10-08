@@ -49,3 +49,13 @@ gem 'rake'
 ```
 31. `bundle install`を実行する。
 32. `serverspec-init`を実行する。
+33. `rspec --init`を実行する。
+34. `spec/spec_helper.rb`ファイルの先頭に以下のコードを追加する
+
+```ruby
+require 'serverspec'
+set :backend, :exec
+```
+35. `spec`ディレクトリでテストを実行したいファイルを作成してコードを記述します。
+36. `rspec`を実行する
+37. 
