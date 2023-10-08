@@ -21,8 +21,8 @@ set :backend, :exec
 15. `find ./spec -type f -name '*_spec.rb'`を実行して
 
 11. `cd ..`でRailsのプロジェクトディレクトリから出る。
-12. `mkdir my_serverspec_tests`を実行する。
-13. `cd my_serverspec_tests`を実行する。
+12. `mkdir [ディレクトリ名]`を実行する。
+13. `cd [ディレクトリ名]`を実行する。
 14. `git init`を実行する。
 15. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。「Add a README file」にチェックを入れる。
 16. `git remote add origin [リポジトリのURL]`を実行する。
@@ -38,4 +38,14 @@ set :backend, :exec
 26. 「Generate new token」→「Generate new token(classic)」をクリックする。
 27. 「Note」に名前を入力して、「Select scopes」では「repo」にチェックを入れ、一番下までスクロールして、「Generate token」をクリックする。
 28. トークンが表示されるのでコピーして大切に保管し、パスワード入力欄にコピーしたトークンを入力する。
-29. 
+29. 新しく作成したディレクトリで`touch Gemfile`を実行する。
+30. Gemfileに以下のコードをコピーして貼り付けます。
+
+```ruby
+source 'https://rubygems.org'
+
+gem 'serverspec'
+gem 'rake'
+```
+31. `bundle install`を実行する。
+32. `serverspec-init`を実行する。
