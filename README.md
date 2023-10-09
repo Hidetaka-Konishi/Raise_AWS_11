@@ -1,4 +1,4 @@
-# Serverspecのインストールから実行まで
+# Serverspecのインストールからテストコードの実行まで
 1. Gemfileに`gem 'serverspec'`を追加する。
 2. `bundle`を実行する。
 3. `serverspec-init`を実行する
