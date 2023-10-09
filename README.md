@@ -14,15 +14,9 @@ set :backend, :exec
 8. テストコードを書いたファイルで先頭の部分に`require 'spec_helper'`が記述されていることを確認する。
 9. NginxとUnicornを再起動する。Unicornが再起動できない場合は11からの手順を行う。
 10. `rake spec`を実行する。
-11. `rvm use 3.1.2@my_new_gemset --create`を実行する。3.1.2は実際に使用しているrubyのバージョンに合わせる。これにより`my_new_gemset`という名前のGemsetが作成される。
-12. `gem install bundler`を実行する。
-13. `gem install serverspec`を実行する。
-14. `bundle install`を実行する。
-15. `find ./spec -type f -name '*_spec.rb'`を実行して
-
 11. `cd ..`でRailsのプロジェクトディレクトリから出る。
-12. `mkdir [ディレクトリ名]`を実行する。
-13. `cd [ディレクトリ名]`を実行する。
+12. `mkdir my_serverspec_tests`を実行する。`my_serverspec_tests`は新しく作成するディレクトリで任意の名前をつける。
+13. `cd my_serverspec_tests`を実行する。
 14. `git init`を実行する。
 15. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。「Add a README file」にチェックを入れる。
 16. `git remote add origin [リポジトリのURL]`を実行する。
@@ -57,5 +51,4 @@ require 'serverspec'
 set :backend, :exec
 ```
 35. `spec`ディレクトリでテストを実行したいファイルを作成してコードを記述します。
-36. `rspec`を実行する
-37. 
+36. Railsアプリのプロジェクトディレクトリで`rspec ../my_serverspec_tests`を実行する。このコマンドを実行することでテストコードの実行をプロジェクトディレクトリ外で行い、かつプロジェクトディレクトリで設定した内容をテストできる。
