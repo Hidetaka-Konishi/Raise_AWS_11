@@ -14,7 +14,7 @@ set :backend, :exec
 8. `cd ..`でRailsのプロジェクトディレクトリから出る。
 9. `mkdir my_serverspec_tests`を実行する。`my_serverspec_tests`は新しく作成するディレクトリで任意の名前をつける。
 10. `cd my_serverspec_tests`を実行する。
-11. git init`を実行する。
+11. `git init`を実行する。
 12. GitHubで新しくリポジトリを作成する。パブリック、サブネットはどちらでもよい。「Add a README file」にチェックを入れる。
 13. `git remote add origin [リポジトリのURL]`を実行する。
 14. `echo "# My Serverspec Tests" > README.md`を実行する。
