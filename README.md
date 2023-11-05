@@ -11,6 +11,7 @@ set :backend, :exec
 5. `mkdir my_serverspec_tests`を実行する。`my_serverspec_tests`は新しく作成するディレクトリで任意の名前をつける。
 6. `cd my_serverspec_tests`を実行する。
 7. `serverspec-init`を実行する。
-8. `rspec --init`を実行する。
-9. `spec`ディレクトリでテストを実行したいファイルを作成してコードを記述します。
-10. Railsアプリのプロジェクトディレクトリで`rspec ../my_serverspec_tests`を実行する。このコマンドを実行することでテストコードの実行をプロジェクトディレクトリ外で行い、かつプロジェクトディレクトリで設定した内容をテストできる。
+8. 今回はOSがAmazon Linux2のEC2にSSH接続してテストを実行したいので、`Select OS type`ではUN*Xである1を選択して、Select a backend typeではSSHである1を選択する。
+9. `rspec --init`を実行する。
+10. `spec`ディレクトリでテストを実行したいファイルを作成してコードを記述します。
+11. Railsアプリのプロジェクトディレクトリで`rspec ../my_serverspec_tests`を実行する。このコマンドを実行することでテストコードの実行をプロジェクトディレクトリ外で行い、かつプロジェクトディレクトリで設定した内容をテストできる。
