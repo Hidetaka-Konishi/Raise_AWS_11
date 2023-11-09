@@ -7,7 +7,7 @@
 require 'serverspec'
 set :backend, :exec
 ```
-4. `cd ..`でRailsのプロジェクトディレクトリから出る。
+4. `cd`でRailsのプロジェクトディレクトリから出る。
 5. `mkdir my_serverspec_tests`を実行する。`my_serverspec_tests`は新しく作成するディレクトリで任意の名前をつける。
 6. `cd my_serverspec_tests`を実行する。
 7. `serverspec-init`を実行する。
