@@ -16,3 +16,5 @@ set :backend, :exec
 10. Railsアプリのプロジェクトディレクトリで`rspec ../my_serverspec_tests`を実行する。このコマンドを実行することでテストコードの実行をプロジェクトディレクトリ外で行い、かつプロジェクトディレクトリ配下で設定した内容をテストできる。
 
 ※上記の11まで操作が行ったあとにUnicornを停止して再度起動しようとすると起動できなくなる。これを解決するにはGemfileの`gem 'serverspec'`を削除することで起動できるようになる。また、テストコードを実行したいときはGemfileの`gem 'serverspec'`を追加してあげる必要がある。
+
+※CircleCIからServerspecのテストを行う場合はホスト名またはIPアドレスのディレクトリを削除し、`my_serverspec_tests/spec`ディレクトリに新しく`sample_spec.rb`を作成してコードを記述する。
