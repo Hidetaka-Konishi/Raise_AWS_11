@@ -1,20 +1,15 @@
-# Serverspecのインストールからテストコードの実行まで
-1. Gemfileに`gem 'serverspec'`を追加する。
-2. `bundle`を実行する。
-3. `spec_helper.rb`ファイルの先頭に以下のコードを追加する。
+# 1つのサーバー内でServerspecのインストールからテストコードの実行まで
+1.  `ec2-user`ディレクトリで`gem install serverspec`を実行する。
+2. `mkdir [任意のディレクトリ名]`を実行する。
+3. `cd [2で作成した任意のディレクトリ名]`を実行して移動する。
+4. `serverspec-init`を実行する。
+5. UN*XとExec (local)を選択する。今回は1つのサーバー内で完結するのでExec (local)を選択している。
+6. `serverspec-init`で自動作成された`spec_helper.rb`ファイルの最初に以下のコードを追加する。
 
-```ruby
+```
 require 'serverspec'
 set :backend, :exec
 ```
-4. `cd`でRailsのプロジェクトディレクトリから出る。
-5. `mkdir my_serverspec_tests`を実行する。`my_serverspec_tests`は新しく作成するディレクトリで任意の名前をつける。
-6. `cd my_serverspec_tests`を実行する。
-7. `serverspec-init`を実行する。
-8. 今回はOSがAmazon Linux2のEC2にSSH接続してテストを実行したいので、`Select OS type`ではUN*Xである1を選択して、`Select a backend type`ではSSHである1を選択する。AWSを使用しているので`Vagrant instance`はnを選択し、`Input target host name`はEC2のホスト名またはIPアドレスを入力する。
-9. ホスト名またはIPアドレスのディレクトリにある`sample_spec.rb`をテストを実行したいコードに書き換える。
-10. Railsアプリのプロジェクトディレクトリで`rspec ../my_serverspec_tests`を実行する。このコマンドを実行することでテストコードの実行をプロジェクトディレクトリ外で行い、かつプロジェクトディレクトリ配下で設定した内容をテストできる。
 
-※上記の11まで操作が行ったあとにUnicornを停止して再度起動しようとすると起動できなくなる。これを解決するにはGemfileの`gem 'serverspec'`を削除することで起動できるようになる。また、テストコードを実行したいときはGemfileの`gem 'serverspec'`を追加してあげる必要がある。
-
-※CircleCIからServerspecのテストを行う場合はホスト名またはIPアドレスのディレクトリを削除し、`my_serverspec_tests/spec`ディレクトリに新しく`sample_spec.rb`を作成してコードを記述する。
+7. `serverspec-init`で自動作成された`sample_spec.rb`をテストしたい内容のコードに書き換える。
+8. 2で作成したテスト用のディレクトリで`rake spec`を実行する。
